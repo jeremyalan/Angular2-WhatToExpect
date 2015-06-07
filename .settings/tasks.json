@@ -1,0 +1,19 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+        "--no-color"
+    ],
+    "tasks": [
+        {
+			"taskName": "jade",
+			// Make this the default build command.
+			"isBuildCommand": true,
+			// Show the output window only if unrecognized errors occur.
+			"showOutput": "silent",
+			// Task is running in watching mode.
+			"isWatching": false
+		},
+	]
+}
