@@ -96,3 +96,7 @@ span.pre {
 span.pre .highlight {
   color: white;
 }
+.two-column .col {
+  width: 50%;
+  float: left;
+}

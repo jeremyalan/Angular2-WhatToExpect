@@ -7,7 +7,7 @@
     ],
     "tasks": [
         {
-			"taskName": "jade",
+			"taskName": "compile",
 			// Make this the default build command.
 			"isBuildCommand": true,
 			// Show the output window only if unrecognized errors occur.
@@ -15,5 +15,23 @@
 			// Task is running in watching mode.
 			"isWatching": false
 		},
+        
+        {
+			"taskName": "less",
+			// Make this the default build command.
+			"isBuildCommand": false,
+			// Show the output window only if unrecognized errors occur.
+			"showOutput": "silent",
+			// Task is running in watching mode.
+			"isWatching": false,
+            "problemMatcher": {
+				// Use the standard less compilation problem matcher as the base.
+				"base": "$lessCompile",
+				// A regular expression signalling that a watched task begins executing (usually triggered through file watching).
+				"watchedTaskBeginsRegExp": "^\\[\\d+:\\d+:\\d+\\] Starting 'clean-styles'\\.\\.\\.$",
+				// A regular expression signalling that a watched tasks ends executing.
+				"watchedTaskEndsRegExp": "^\\[\\d+:\\d+:\\d+\\] Finished 'styles' after \\d+"
+			}
+		}
 	]
 }
