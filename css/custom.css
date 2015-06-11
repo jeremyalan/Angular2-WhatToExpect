@@ -35,7 +35,17 @@ li {
   line-height: 1.5em !important;
 }
 .break {
-  margin-top: 1em !important;
+  margin-top: 5% !important;
+}
+.break-md {
+  margin-top: 10% !important;
+}
+.break-lg {
+  margin-top: 15% !important;
+}
+div.reveal img {
+  border-width: 0;
+  box-shadow: none;
 }
 .text-left {
   display: block;
@@ -50,10 +60,36 @@ li {
 .underline {
   text-decoration: underline;
 }
+.underline-block {
+  border-bottom: 1px solid black !important;
+  padding-bottom: 0.5em !important;
+}
 .no-upper {
   text-transform: none;
 }
+.clear {
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+table.table-layout {
+  border-width: 0;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+table.table-layout > tbody > tr > td {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
 .pre {
+  display: inline-block;
+  width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
 }
@@ -61,6 +97,8 @@ li {
   color: white;
 }
 .block-pre {
+  display: inline-block;
+  width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
   background: #1E2022;
@@ -70,6 +108,7 @@ li {
   color: white;
 }
 .inline-pre {
+  width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
   display: inline-block;
@@ -79,6 +118,8 @@ li {
   color: white;
 }
 .reveal section pre {
+  display: inline-block;
+  width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
   background: #1E2022;
@@ -88,6 +129,7 @@ li {
   color: white;
 }
 span.pre {
+  width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
   display: inline-block;
@@ -97,6 +139,13 @@ span.pre .highlight {
   color: white;
 }
 .two-column .col {
-  width: 50%;
+  width: 45%;
+  margin: 0 2.5%;
   float: left;
+}
+.two-column .col-33 {
+  width: 30%;
+}
+.two-column .col-66 {
+  width: 60%;
 }

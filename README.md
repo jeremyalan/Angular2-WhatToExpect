@@ -12,6 +12,7 @@ Preview the slides online here: [https://jeremyalan.github.io/Angular2-WhatToExp
     * No dirty checking
     * No $scope watchers
     * Uni-directional data flow (e.g. no two-way binding)
+      * Use Zones.js to detect changes (by scope)
   * Web standards
     * Classes
     * Modules
@@ -27,6 +28,10 @@ Angular 2 is component-based
 
 ## Use a concrete example to explain, rather than describing in words. e.g. video-player component
 Web Components
+  - Custom Elements
+  - Shadow DOM
+  - HTML Imports
+  
   * Logical 
     * 3 Basic Components
 	  * Properties - state of the component

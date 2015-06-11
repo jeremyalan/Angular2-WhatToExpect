@@ -1,0 +1,53 @@
+section
+    h2 Components
+    h3 API
+
+    .break
+        table.table-layout
+            tbody
+                tr
+                    td(style="width: 33%")
+                        b Properties
+                    td(style="width: 66%")
+                        span.small The state of the component
+                        
+                        div
+                            .pull-left(style="margin-left: 5%")
+                                pre.
+                                    .disabled
+                            .pull-left(style="margin-left: 5%")
+                                pre.
+                                    .value
+                        .clear
+                tr
+                    td(style="width: 33%")
+                        .break
+                            b Methods
+                    td(style="width: 66%")
+                        .break
+                            span.small The behavior of the component
+                            
+                            div
+                                .pull-left(style="margin-left: 5%")
+                                    pre.
+                                        .click()
+                                .pull-left(style="margin-left: 5%")
+                                    pre.
+                                        .focus()
+                            .clear
+                tr
+                    td(style="width: 33%")
+                        .break
+                            b Events
+                    td(style="width: 66%")
+                        .break
+                            span.small Notifies listeners of state changes
+                        
+                            div
+                                .pull-left(style="margin-left: 5%")
+                                    pre.
+                                        .on('click', ...)
+                                .pull-left(style="margin-left: 5%")
+                                    pre.
+                                        .on('change', ...)
+                            .clear
