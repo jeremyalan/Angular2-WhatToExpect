@@ -34,6 +34,9 @@
 li {
   line-height: 1.5em !important;
 }
+.break-sm {
+  margin-top: 2% !important;
+}
 .break {
   margin-top: 5% !important;
 }
@@ -61,7 +64,7 @@ div.reveal img {
   text-decoration: underline;
 }
 .underline-block {
-  border-bottom: 1px solid black !important;
+  border-bottom: 1px solid white !important;
   padding-bottom: 0.5em !important;
 }
 .no-upper {
@@ -148,4 +151,21 @@ span.pre .highlight {
 }
 .two-column .col-66 {
   width: 60%;
+}
+.reveal {
+  background: #003581;
+  color: white;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  color: white;
+}
+.reveal section > header h1,
+.reveal section > header h2,
+.reveal section > header h3,
+.reveal section > header h4 {
+  color: #378fe7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }

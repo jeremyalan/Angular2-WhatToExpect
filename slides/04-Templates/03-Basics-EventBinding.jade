@@ -1,0 +1,25 @@
+section
+    header
+        h2 Templates
+        h3 Basics
+        
+    .break-md
+        div Event Binding
+
+    div
+        pre
+            span &lt;media&nbsp;
+            span.highlight (play)="onPlay($event)"
+            span &gt;&lt;/media&gt;
+    div
+        pre
+            span &lt;media&nbsp;
+            span.highlight on-play="onPlay($event)"
+            span &gt;&lt;/media&gt;
+
+    .break.small
+        div A few notes...
+        .break-sm
+            ul
+                li Use $event for custom data
+                li No need for ng-click, ng-change

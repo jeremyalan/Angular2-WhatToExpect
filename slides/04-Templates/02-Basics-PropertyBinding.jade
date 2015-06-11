@@ -1,0 +1,26 @@
+section
+    header
+        h2 Templates
+        h3 Basics
+        
+    .break-md
+        div Property Binding
+    
+    div
+        pre
+            span &lt;media&nbsp;
+            span.highlight [url]="media.url"
+            span &gt;&lt;/media&gt;
+    div
+        pre
+            span &lt;media&nbsp;
+            span.highlight bind-url="media.url"
+            span &gt;&lt;/media&gt;
+        
+    .break.small
+        div A few notes...
+        .break-sm
+            ul
+                li No more &nbsp;&nbsp;&nbsp;'@'&nbsp;&nbsp;&nbsp;'='&nbsp;&nbsp;&nbsp;'&amp;'
+                li No need for ng-src, ng-href
+                li One-way binding only!

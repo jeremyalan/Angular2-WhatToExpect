@@ -32,13 +32,17 @@ Web Components
   - Shadow DOM
   - HTML Imports
   
-  * Logical 
-    * 3 Basic Components
-	  * Properties - state of the component
+  * Component API
+    * Properties - state of the component
 	  * Methods - behavior of the component
 	  * Events - notifies listeners of state changes
 	  
 	  !!! These are not affected by the (visual) template !!! 
+  
+  * Logical
+    * Written in JavaScript
+    * Controllers, Services, etc.
+    * Nested Components
   * Visual
     * Template (View)
 	  * Look n' feel

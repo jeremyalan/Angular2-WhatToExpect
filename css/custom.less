@@ -14,6 +14,7 @@
 .small-50 { font-size: 0.50em !important; }
 
 li { line-height: 1.5em !important; }
+.break-sm { margin-top:  2% !important; }
 .break { margin-top:  5% !important; }
 .break-md { margin-top:  10% !important; }
 .break-lg { margin-top:  15% !important; }
@@ -24,7 +25,7 @@ div.reveal img { border-width: 0; box-shadow: none }
 
 .strong { font-weight: bold }
 .underline { text-decoration: underline }
-.underline-block { border-bottom: 1px solid black !important; padding-bottom: 0.5em !important }
+.underline-block { border-bottom: 1px solid white !important; padding-bottom: 0.5em !important }
 .no-upper { text-transform: none }
 
 .clear { clear: both }
@@ -85,4 +86,18 @@ span.pre { .inline-pre }
     .col-66 {
       width: 60%;
     }
+}
+
+.reveal {
+  background: #003581;
+  color: white;
+  h1, h2, h3, h4 {
+    color: white;
+  }
+}
+.reveal section > header {
+  h1, h2, h3, h4 {
+    color: lighten(#1976D2, 10%);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+  }
 }
