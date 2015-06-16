@@ -1,0 +1,20 @@
+section
+    header
+        h2 Template Syntax
+        h3 Pipes
+        
+    .break
+        pre.
+            export class Pipe {
+            
+                // True if the value can be transformed.
+                // False, otherwise.
+                <span class="highlight">supports(obj): boolean;</span>
+                
+                // Transforms the value.
+                <span class="highlight">transform(obj);</span>
+                
+                // Cleans up this instance.
+                <span class="highlight">onDestroy();</span>
+
+            }

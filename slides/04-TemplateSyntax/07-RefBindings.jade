@@ -1,0 +1,25 @@
+section
+    header
+        h2 Template Syntax
+        h3 Ref Bindings
+        
+    .break
+        div Template
+        
+        pre(style="width: 80%").
+            &lt;my-component&gt;
+              &lt;label&gt;Your name: &lt;label&gt;
+              &lt;input <span class="highlight">#name</span> /&gt;
+            
+              &lt;button (click)="sayHello(<span class="highlight">name.value</span>)"&gt;Say Hello&lt;/button&gt;
+            &lt;/my-component&gt;
+            
+    .break
+        div Controller
+        
+        pre(style="width: 80%").
+            class MyComponent {
+                sayHello(name: string) {
+                   alert('Hello ' + name + '!');
+                }
+            }
