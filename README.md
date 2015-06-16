@@ -70,20 +70,25 @@ Template Syntax
     * Event binding
       <button (click)="addItem($event)"></button>
   * Advanced Topics
-    * Ref binding
-      <input #name />
-    
-    * Microsyntax
-      e.g. *ng-for
     * Pipes
       e.g. {{ name | uppercase }}
       
       * Replaces filters in Angular v1
 
+    * Ref binding
+      <input #name />
+    
+    * Microsyntax
+      e.g. *ng-for
+
     * Templates
       e.g. *ng-for *ng-if
       
-      * Replaces compile/link & "transclusion" in Angular v1
+      * Replaces compile/link
+
+    * Transclusion
+      * No special $scope handlers required
+      * Use <content> tags to "transclude" content
       * Supports multiple child templates
         e.g. <content select="[head]"></content>
 

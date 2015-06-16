@@ -1,0 +1,23 @@
+section
+    header
+        h2 Template Syntax
+        h3 Templates
+        
+    .break.small
+        ul
+            li Declare a snippet of HTML without rendering it
+            li Similar to compile/link separation in Angular 1.x
+        
+    .break
+        div Conditionals
+        
+        pre(style="width: 80%").
+            &lt;div <span class="highlight">*ng-if="isError"</span>&gt;
+              Login failed, please try again.
+            &lt;/div&gt;
+    
+    div
+        div.small (without short-hand syntax)
+
+        pre(style="width: 80%").
+            &lt;template [ng-if]="isError"&gt;...&lt;/template&gt;

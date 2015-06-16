@@ -1,0 +1,25 @@
+section
+    header
+        h2 Template Syntax
+        h3 Templates
+        
+    .break.small
+        ul
+            li Declare a snippet of HTML without rendering it
+            li Similar to compile/link separation in Angular 1.x
+        
+    .break
+        div Repeaters
+        
+        pre(style="width: 80%").
+          &lt;ul&gt;
+            &lt;li <span class="highlight">*ng-for="#user in users"</span>&gt;
+              &lt;span&gt;{{ user.Name }}&lt;/span&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+          
+      div
+         div.small (without short-hand syntax)
+
+         pre(style="width: 80%").
+           &lt;template [ng-for] #user [ng-for-of]="users"&gt;...&lt;/template&gt;
