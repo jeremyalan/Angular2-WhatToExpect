@@ -13,7 +13,9 @@
 .small-55 { font-size: 0.55em !important; }
 .small-50 { font-size: 0.50em !important; }
 
+ul.no-bullet { list-style: none }
 li { line-height: 1.5em !important; }
+li.slim { line-height: 1.25em !important; }
 .break-sm { margin-top:  2% !important; }
 .break { margin-top:  5% !important; }
 .break-md { margin-top:  10% !important; }
@@ -46,6 +48,7 @@ table.table-layout {
 }
 
 .pre {
+  font-family: monospace;
   display: inline-block;
   width: auto;
   
@@ -68,7 +71,8 @@ table.table-layout {
   .pre;
 
   display: inline-block;
-  font-size: 0.8em
+  font-size: 0.8em;
+  line-height: 1.1em;
 }
 
 .reveal section pre { .block-pre }

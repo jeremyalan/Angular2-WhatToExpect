@@ -31,8 +31,14 @@
 .small-50 {
   font-size: 0.50em !important;
 }
+ul.no-bullet {
+  list-style: none;
+}
 li {
   line-height: 1.5em !important;
+}
+li.slim {
+  line-height: 1.25em !important;
 }
 .break-sm {
   margin-top: 2% !important;
@@ -91,6 +97,7 @@ table.table-layout > tbody > tr > td {
   border-width: 0;
 }
 .pre {
+  font-family: monospace;
   display: inline-block;
   width: auto;
   letter-spacing: 0.2px;
@@ -100,6 +107,7 @@ table.table-layout > tbody > tr > td {
   color: white;
 }
 .block-pre {
+  font-family: monospace;
   display: inline-block;
   width: auto;
   letter-spacing: 0.2px;
@@ -111,16 +119,19 @@ table.table-layout > tbody > tr > td {
   color: white;
 }
 .inline-pre {
+  font-family: monospace;
   width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
   display: inline-block;
   font-size: 0.8em;
+  line-height: 1.1em;
 }
 .inline-pre .highlight {
   color: white;
 }
 .reveal section pre {
+  font-family: monospace;
   display: inline-block;
   width: auto;
   letter-spacing: 0.2px;
@@ -132,11 +143,13 @@ table.table-layout > tbody > tr > td {
   color: white;
 }
 span.pre {
+  font-family: monospace;
   width: auto;
   letter-spacing: 0.2px;
   color: #FFC66D;
   display: inline-block;
   font-size: 0.8em;
+  line-height: 1.1em;
 }
 span.pre .highlight {
   color: white;

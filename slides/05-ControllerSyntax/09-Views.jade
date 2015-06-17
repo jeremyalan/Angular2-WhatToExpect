@@ -1,0 +1,36 @@
+section
+    header
+        h2 Controller Syntax
+        h3 Views
+
+    .break
+        .two-column
+            .col
+                .small
+                    .break
+                        ul
+                            li Define the template used to render the component
+                            li
+                                div Must declare nested directives
+                                ul
+                                    li Performance
+                                    li Avoid name collisions
+                
+            .col
+                pre.
+                    import {DirectiveType} from '...';
+                    
+                    <span class="highlight">@View</span>({
+        
+                       <span class="highlight">template:</span> 
+                         '&lt;div&gt;&lt;/div&gt;',
+        
+                       <span class="highlight">templateUrl:</span>
+                         'path/to/template.html',
+                        
+                       <span class="highlight">directives:</span>
+                         [ DirectiveType ]
+
+                       <span class="highlight">// and more ...</span>
+
+                    })

@@ -1,0 +1,58 @@
+section
+    header
+        h2 Controller Syntax
+        h3 Directives
+
+    .break
+        .two-column
+            .col
+                .small
+                    ul
+                        li
+                            div selector
+                            ul
+                                li.slim
+                                    span.pre element-name
+                                li.slim
+                                    span.pre .class
+                                li.slim
+                                    span.pre [attribute]
+                                li.slim
+                                    span.pre [attribute=value]
+                                li.slim
+                                    span.pre :not(sub_selector)
+                                li.slim
+                                    span.pre selector1, selector2
+                                    
+                        li(style='margin-top: 0.75em')
+                            div properties
+                            ul.small
+                                li Map properties to HTML
+                                li Can use pipes
+                        
+                        li(style='margin-top: 0.75em')
+                            div events
+                            ul.small
+                                li Declare custom events
+                
+            .col
+                pre.
+                    <span class="highlight">@Directive</span>({
+        
+                       <span class="highlight">selector:</span>
+                         '&lt;css-selector&gt;',
+        
+                       <span class="highlight">properties:</span>
+                         [
+                           'propName',
+                           'propName: attrName',
+                           'propName: attrName | pipe'
+                         ],
+                        
+                       <span class="highlight">events:</span>
+                         [
+                           '&lt;event-name&gt;'
+                         ]
+                         
+                       <span class="highlight">// and more ...</span>
+                    })

@@ -1,0 +1,27 @@
+section
+    header
+        h2 Controller Syntax
+        h3 Annotations
+
+    .break.small
+        pre(style='width: 65%').
+           import {bootstrap} from 'angular2/angular2';
+           
+           <span class="highlight">@Component({
+              selector: 'my-app'
+           })
+           @View({
+              templateUrl: 'templates/my-app.html',
+              directives: [NgFor]
+           })</span>
+           class MyApp {
+              constructor() {
+              
+              }
+          
+              add($event, input) {
+
+              }
+           }
+           
+           bootstrap(MyApp);
