@@ -57,7 +57,35 @@
 </pre></div><div><div class="small">(without short-hand syntax)</div><pre style="width: 80%">&lt;template [ng-for] #user [ng-for-of]="users"&gt;...&lt;/template&gt;</pre></div></section><section><header><h2>Template Syntax</h2><h3>Templates</h3></header><div class="break small"><ul><li>Declare a snippet of HTML without rendering it</li><li>Similar to compile/link separation in Angular 1.x</li></ul></div><div class="break"><div>Conditionals</div><pre style="width: 80%">&lt;div <span class="highlight">*ng-if="isError"</span>&gt;
   Login failed, please try again.
 &lt;/div&gt;
-</pre></div><div><div class="small">(without short-hand syntax)</div><pre style="width: 80%">&lt;template [ng-if]="isError"&gt;...&lt;/template&gt;</pre></div></section></section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
+</pre></div><div><div class="small">(without short-hand syntax)</div><pre style="width: 80%">&lt;template [ng-if]="isError"&gt;...&lt;/template&gt;</pre></div></section><section><header><h2>Template Syntax</h2><h3>Transclusion</h3></header><div class="break"><div class="inline-pre">isolate $scope + compile + transcludeFn...</div><img src="slides/images/transclusion.png" style="width: 100%"></div><div class="break small"><div>(makes sense, right?)</div></div></section><section><header><h2>Template Syntax</h2><h3>Transclusion</h3></header><div class="break"><div class="two-column"><div class="col col-33"><div>Usage</div><pre>&lt;my-component&gt;
+  
+    &lt;header&gt;
+      <span class="highlight">&lt;!-- Header --&gt;</span>
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+      <span class="highlight">&lt;!-- Content --&gt;</span>
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+      <span class="highlight">&lt;!-- Footer --&gt;</span>
+    &lt;/footer&gt;
+
+&lt;/my-component&gt;</pre></div><div class="col col-66"><div>Implementation</div><pre>&lt;div class="container"&gt;
+  &lt;div class="header"&gt;
+    <span class="highlight">&lt;content select="header"&gt;&lt;/content&gt;</span>
+  &lt;/div&gt;
+    
+  &lt;div class="main-content-wrapper"&gt;
+    &lt;div class="main-content"&gt;
+      <span class="highlight">&lt;content select="main"&gt;&lt;/content&gt;</span>
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+  &lt;div class="footer"&gt;
+    <span class="highlight">&lt;content select="footer"&gt;&lt;/content&gt;</span>
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div></div></div></section></section><section><section><header><h2>Component Classes</h2><h3>Basics</h3></header><div class="break-md"><div>Things you need to know...</div></div><div class="break-sm"><ul><li>Class + Module (ES6)</li><li><div>Annotations</div><div class="small">(or JavaScript equivalent) </div></li><li>Dependency Injection</li></ul></div></section></section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
 <script src="js/reveal.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">

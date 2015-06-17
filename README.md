@@ -102,12 +102,12 @@ Angular Components
       * Triggered via CSS Selector, usually a custom tag name
       * Only one component (per HTML Element) is allowed
     * Views
-      * Must be paired with a component (is this true??)
+      * Must be paired with a component
       * Provides the template used to render the component
       * Supports multiple templates per component for flexible rendering
     * Directives
       e.g. <i class="icon-help" tooltip="Click here to learn more"></i>
-      a
+
       * Triggered via CSS Selector, usually an attribute
       * Not a stand-alone component, does not have a View counterpart
       * Extends the behavior of an existing component (or native element)

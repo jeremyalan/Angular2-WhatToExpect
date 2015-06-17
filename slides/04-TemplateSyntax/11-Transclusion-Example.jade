@@ -1,0 +1,45 @@
+section
+    header
+        h2 Template Syntax
+        h3 Transclusion
+        
+    .break
+        .two-column
+            .col.col-33
+                div Usage
+                
+                pre.
+                    &lt;my-component&gt;
+                      
+                        &lt;header&gt;
+                          <span class="highlight">&lt;!-- Header --&gt;</span>
+                        &lt;/header&gt;
+                        
+                        &lt;main&gt;
+                          <span class="highlight">&lt;!-- Content --&gt;</span>
+                        &lt;/main&gt;
+                        
+                        &lt;footer&gt;
+                          <span class="highlight">&lt;!-- Footer --&gt;</span>
+                        &lt;/footer&gt;
+                    
+                    &lt;/my-component&gt;
+            .col.col-66
+                div Implementation
+                
+                pre.
+                    &lt;div class="container"&gt;
+                      &lt;div class="header"&gt;
+                        <span class="highlight">&lt;content select="header"&gt;&lt;/content&gt;</span>
+                      &lt;/div&gt;
+                        
+                      &lt;div class="main-content-wrapper"&gt;
+                        &lt;div class="main-content"&gt;
+                          <span class="highlight">&lt;content select="main"&gt;&lt;/content&gt;</span>
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                        
+                      &lt;div class="footer"&gt;
+                        <span class="highlight">&lt;content select="footer"&gt;&lt;/content&gt;</span>
+                      &lt;/div&gt;
+                    &lt;/div&gt;
