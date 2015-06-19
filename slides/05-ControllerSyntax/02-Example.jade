@@ -9,7 +9,8 @@ section
            import {ItemStore} from 'services/ItemStore';
             
            @Component({
-              selector: 'my-app'
+              selector: 'my-app',
+              appInjector: [ItemStore]
            })
            @View({
               templateUrl: 'templates/my-app.html',

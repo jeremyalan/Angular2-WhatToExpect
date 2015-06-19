@@ -5,18 +5,20 @@ section
 
     .break.small
         pre(style='width: 65%').
-           import {bootstrap} from 'angular2/angular2';
+           import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
+           import {ItemStore} from 'services/ItemStore';
            
            <span class="highlight">@Component({
               selector: 'my-app'
+              appInjector: [ItemStore]
            })
            @View({
               templateUrl: 'templates/my-app.html',
               directives: [NgFor]
            })</span>
            class MyApp {
-              constructor() {
-              
+              constructor(itemStore: ItemStore) {
+
               }
           
               add($event, input) {

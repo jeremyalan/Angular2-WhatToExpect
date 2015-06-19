@@ -5,9 +5,9 @@ section
 
     .break-md
         .two-column
-            .col.col-66
+            .col
                 .small
-                    div Inherits same behavior as Directive
+                    div Inherits from Directive
 
                     .break
                         div +
@@ -17,10 +17,16 @@ section
                             li Paired with View annotation(s)
                             li Assigns Injector
                 
-            .col.col-33
+            .col
                 pre.
+                    import {MyService} from '...';
+                
                     <span class="highlight">@Component</span>({
         
-                       <span class="highlight">// Same as @Directive</span>
+                       // Same as @Directive
+                       
+                       <span class="highlight">appInjector:</span>
+                           [ MyService ]
 
+                       <span class="highlight">// and more ...</span>
                     })

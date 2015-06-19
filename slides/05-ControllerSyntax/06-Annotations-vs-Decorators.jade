@@ -1,0 +1,38 @@
+section
+    header
+        h2 Controller Syntax
+        h3 Annotations
+
+    .break
+        .two-column
+            .col
+                div Decorators
+                ul.break.small
+                    li Proposal for ES7
+                    li
+                        div Syntax for extending classes, methods, and parameters
+                        pre(style='width: 90%').
+                            <span class="highlight">@Class</span>
+                            class MyClass {
+                                
+                                <span class="highlight">@Method</span>
+                                myMethod(<span class="highlight">@Param</span> myParam) {
+                                    ...
+                                }
+                            
+                            }
+                            
+            .col
+                div Annotations
+                ul.break.small
+                    li Specific type of decorator
+                    li
+                        div Attach metadata to type declarations
+                        pre(style='width: 90%').
+                            function MyClass() {
+                                ...
+                            }
+                            
+                            <span class="highlight">MyClass.annotations = [
+                                new Foo()
+                            ]</span>
