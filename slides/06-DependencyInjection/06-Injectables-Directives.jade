@@ -1,0 +1,48 @@
+section
+    header
+        h2 Dependency Injection
+        h3 Directives
+        
+    .break
+        div Use Annotations to locate directives
+        
+    .break.text-left
+        div
+            .two-column
+                .col.col-33.text-right
+                    pre.inline-pre &lt;no-decoration&gt;
+                .col.col-66
+                    span.small current element only
+        .clear
+        
+        div
+            .two-column
+                .col.col-33.text-right
+                    pre.inline-pre @Ancestor
+                .col.col-66
+                    span.small between parent and Shadow DOM root
+        .clear
+        
+        div
+            .two-column
+                .col.col-33.text-right
+                    pre.inline-pre @Parent
+                .col.col-66
+                    span.small direct parent element only
+        .clear
+
+        div
+            .two-column
+                .col.col-33.text-right
+                    pre.inline-pre @Query
+                .col.col-66
+                    span.small a live collection of direct child directives
+        .clear
+
+        div
+            .two-column
+                .col.col-33.text-right
+                    pre.inline-pre @QueryDescendants
+                .col.col-66
+                    span.small a live collection of any child directives
+        .clear

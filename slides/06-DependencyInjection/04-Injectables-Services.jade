@@ -1,0 +1,18 @@
+section
+    header
+        h2 Dependency Injection
+        h3 Services
+        
+    .break
+        pre.
+            <span class="highlight">import {MyService} from '...';</span>
+            
+            @Component({
+               selector: '...',
+               <span class="highlight">appInjector: [ MyService ]</span>
+            })
+            class MyComponent {
+               <span class="highlight">constructor(myService: MyService) {
+                  ...
+               }</span>
+            }

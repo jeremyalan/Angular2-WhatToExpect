@@ -1,0 +1,30 @@
+section
+    header
+        h2 Dependency Injection
+        h3 Directives
+
+    .break
+        .two-column
+            .col.col-33
+                div app.html
+        
+                pre(style='width: 90%').
+                    &lt;tabset&gt;
+                       &lt;tab&gt;
+                          ...
+                       &lt;/tab&gt;
+                    &lt;/tabset&gt;
+            .col.col-66
+                div TabComponent.ts
+                
+                pre(style='width: 90%').
+                    import {TabSet} from '...';
+                    
+                    @Component({
+                       selector: 'tab'
+                    })
+                    class Tab {
+                       constructor(<span class="highlight">@Parent()</span> tabs: TabSet) {
+                          ...
+                       }
+                    }

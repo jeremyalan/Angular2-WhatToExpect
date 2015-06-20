@@ -1,0 +1,27 @@
+section
+    header
+        h2 Dependency Injection
+        
+    .break
+        h3 Injector
+    
+    .break-sm.small
+        div The IoC container used by Angular to resolve dependencies 
+        div Built on di.js, not specific to Angular
+
+    .break.small
+        div A few things to note...
+        
+        .break-sm
+            ul
+                li
+                    div Multiple injectors per application
+                    
+                    ul
+                        li Each injector is associated with a DOM element
+                li
+                    div Injectors are hierarchical
+                    
+                    ul
+                        li Some dependencies resolved by parent/child injectors
+                        li Replaces $scope inheritance

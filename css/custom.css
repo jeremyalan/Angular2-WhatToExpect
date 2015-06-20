@@ -60,6 +60,10 @@ div.reveal img {
   display: block;
   text-align: left;
 }
+.text-right {
+  display: block;
+  text-align: right;
+}
 .text-center {
   text-align: center;
 }

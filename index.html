@@ -208,7 +208,30 @@ class MyClass {
 
    <span class="highlight">// and more ...</span>
 
-})</pre></div></div></div></section></section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
+})</pre></div></div></div></section></section><section><section><header><h2>Dependency Injection</h2><h3>Benefits</h3></header><div class="break"><ul><li><div>Modularity</div><ul class="small"><li>Single-Responsibility Principle</li><li>Composition over Inheritance</li></ul></li><li class="break"><div>Extensibility</div><ul class="small"><li>Open-Closed Principle</li><li>Decorator pattern</li></ul></li><li class="break"><div>Testability</div><ul class="small"><li>Mock dependencies</li></ul></li></ul></div></section><section><header><h2>Dependency Injection</h2></header><div class="break"><h3>Injector</h3></div><div class="break-sm small"><div>The IoC container used by Angular to resolve dependencies </div><div>Built on di.js, not specific to Angular</div></div><div class="break small"><div>A few things to note...</div><div class="break-sm"><ul><li><div>Multiple injectors per application</div><ul><li>Each injector is associated with a DOM element</li></ul></li><li><div>Injectors are hierarchical</div><ul><li>Some dependencies resolved by parent/child injectors</li><li>Replaces $scope inheritance</li></ul></li></ul></div></div></section><section><header><h2>Dependency Injection</h2><h3>Injector Types</h3></header><div class="break"><ul><li><div>Platform Injector</div><ul class="small"><li>Injects browser resources, such as cookies, location, etc.</li></ul></li><li class="break"><div>Component Injector</div><ul class="small"><li>Inject custom services (imported via ES6 modules)</li></ul></li><li class="break"><div>Element Injector</div><ul class="small"><li>Inject element-specific objects, or other components</li></ul></li></ul></div></section><section><header><h2>Dependency Injection</h2><h3>Services</h3></header><div class="break"><pre><span class="highlight">import {MyService} from '...';</span>
+
+@Component({
+   selector: '...',
+   <span class="highlight">appInjector: [ MyService ]</span>
+})
+class MyComponent {
+   <span class="highlight">constructor(myService: MyService) {
+      ...
+   }</span>
+}</pre></div></section><section><header><h2>Dependency Injection</h2><h3>Element-Specific Objects</h3></header><div class="text-left"><div class="break-md"><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">ElementRef</pre></div><div class="col col-66"><span>obtain a reference to logical element in the view</span></div></div></div><div class="clear"></div><div class="break"><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">ViewContainerRef</pre></div><div class="col col-66"><span>control child template instantiation</span></div></div></div><div class="clear"></div><div class="break"><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">BindingPropagation</pre></div><div class="col col-66"><span>control change detection in a more granular way</span></div></div></div></div></section><section><header><h2>Dependency Injection</h2><h3>Directives</h3></header><div class="break"><div>Use Annotations to locate directives</div></div><div class="break text-left"><div><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">&lt;no-decoration&gt;</pre></div><div class="col col-66"><span class="small">current element only</span></div></div></div><div class="clear"></div><div><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">@Ancestor</pre></div><div class="col col-66"><span class="small">between parent and Shadow DOM root</span></div></div></div><div class="clear"></div><div><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">@Parent</pre></div><div class="col col-66"><span class="small">direct parent element only</span></div></div></div><div class="clear"></div><div><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">@Query</pre></div><div class="col col-66"><span class="small">a live collection of direct child directives</span></div></div></div><div class="clear"></div><div><div class="two-column"><div class="col col-33 text-right"><pre class="inline-pre">@QueryDescendants</pre></div><div class="col col-66"><span class="small">a live collection of any child directives</span></div></div></div><div class="clear"></div></div></section><section><header><h2>Dependency Injection</h2><h3>Directives</h3></header><div class="break"><div class="two-column"><div class="col col-33"><div>app.html</div><pre style="width: 90%">&lt;tabset&gt;
+   &lt;tab&gt;
+      ...
+   &lt;/tab&gt;
+&lt;/tabset&gt;</pre></div><div class="col col-66"><div>TabComponent.ts</div><pre style="width: 90%">import {TabSet} from '...';
+
+@Component({
+   selector: 'tab'
+})
+class Tab {
+   constructor(<span class="highlight">@Parent()</span> tabs: TabSet) {
+      ...
+   }
+}</pre></div></div></div></section></section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
 <script src="js/reveal.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
