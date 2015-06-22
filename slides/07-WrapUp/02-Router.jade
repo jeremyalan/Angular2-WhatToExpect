@@ -1,0 +1,32 @@
+section
+    header
+        h2 Next Steps
+        h3 Router
+        
+    .small
+        .break
+            div MyController.ts
+            
+            pre(style="width: 75%").
+                MyController.<span class="highlight">$routeConfig = [
+                  {
+                    path: '/user',
+                    components:
+                      {
+                        master: 'userList',
+                        detail: 'user'
+                      }
+                  }
+                ];</span>
+    
+        .break-sm
+            div template.html
+            
+            pre(style="width: 75%").
+                &lt;div <span class="highlight">ng-viewport="master"</span>&gt;&lt;/div&gt;
+                &lt;div <span class="highlight">ng-viewport="detail"</span>&gt;&lt;/div&gt;
+                
+        .break-sm
+            div Read the docs
+            
+            a(href='http://angular.github.io/router/') http://angular.github.io/router/

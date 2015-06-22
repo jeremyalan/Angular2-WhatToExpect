@@ -1,0 +1,31 @@
+section
+    header
+        h2 Next Steps
+        h3 FormBuilder
+        
+    .small
+        .break
+            div login.html
+            
+            pre(style="width: 75%").
+               &lt;form <span class="highlight">[control-group]="searchForm"</span>&gt;
+                  &lt;label&gt;Name&lt;/label&gt;
+                  &lt;input type="text" <span class="highlight">control="name"</span> /&gt;
+               &lt;/form&gt;
+    
+        div
+            div LoginComponent.ts
+        
+            pre(style="width: 75%").
+               import {View} from 'angular2/angular2';
+               import {FormBuilder, Validators, formDirectives, ControlGroup} from 'angular2/forms';
+    
+               class LoginComponent {
+                  searchForm: ControlGroup;
+                   
+                  constructor(builder: FormBuilder) {
+                     <span class="highlight">this.searchForm = builder.group({
+                        name: ["", Validators.required]
+                     });</span>
+                  }
+               }

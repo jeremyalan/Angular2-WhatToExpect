@@ -150,7 +150,7 @@ class MyApp {
    }
 }
 
-bootstrap(MyApp);</pre></div></section><section><header><h2>Controller Syntax</h2><h3>Annotations</h3></header><div class="break"><div class="two-column"><div class="col"><div>Decorators</div><ul class="break small"><li>Proposal for ES7</li><li><div>Syntax for extending classes, methods, and parameters</div><pre style="width: 90%"><span class="highlight">@Class</span>
+bootstrap(MyApp);</pre></div></section><section><header><h2>Controller Syntax</h2><h3>Annotations</h3></header><div class="break"><div class="two-column"><div class="col"><div>Decorators</div><ul class="break small"><li>Proposal for ES7</li><li>Supported in TypeScript v1.5</li><li><div>Syntax for extending classes, methods, and parameters</div><pre style="width: 90%"><span class="highlight">@Class</span>
 class MyClass {
     
     <span class="highlight">@Method</span>
@@ -159,7 +159,7 @@ class MyClass {
     }
 
 }
-</pre></li></ul></div><div class="col"><div>Annotations</div><ul class="break small"><li>Specific type of decorator</li><li><div>Attach metadata to type declarations</div><pre style="width: 90%">function MyClass() {
+</pre></li></ul></div><div class="col"><div>Annotations</div><ul class="break small"><li>Specific type of decorator</li><li><div>Attach metadata to types</div><pre style="width: 90%">function MyClass() {
     ...
 }
 
@@ -231,7 +231,34 @@ class Tab {
    constructor(<span class="highlight">@Parent()</span> tabs: TabSet) {
       ...
    }
-}</pre></div></div></div></section></section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
+}</pre></div></div></div></section></section><section><section><header><h2>Next Steps</h2><h3>FormBuilder</h3></header><div class="small"><div class="break"><div>login.html</div><pre style="width: 75%">&lt;form <span class="highlight">[control-group]="searchForm"</span>&gt;
+   &lt;label&gt;Name&lt;/label&gt;
+   &lt;input type="text" <span class="highlight">control="name"</span> /&gt;
+&lt;/form&gt;
+</pre></div><div><div>LoginComponent.ts</div><pre style="width: 75%">import {View} from 'angular2/angular2';
+import {FormBuilder, Validators, formDirectives, ControlGroup} from 'angular2/forms';
+
+class LoginComponent {
+   searchForm: ControlGroup;
+    
+   constructor(builder: FormBuilder) {
+      <span class="highlight">this.searchForm = builder.group({
+         name: ["", Validators.required]
+      });</span>
+   }
+}</pre></div></div></section><section><header><h2>Next Steps</h2><h3>Router</h3></header><div class="small"><div class="break"><div>MyController.ts</div><pre style="width: 75%">MyController.<span class="highlight">$routeConfig = [
+  {
+    path: '/user',
+    components:
+      {
+        master: 'userList',
+        detail: 'user'
+      }
+  }
+];</span>
+</pre></div><div class="break-sm"><div>template.html</div><pre style="width: 75%">&lt;div <span class="highlight">ng-viewport="master"</span>&gt;&lt;/div&gt;
+&lt;div <span class="highlight">ng-viewport="detail"</span>&gt;&lt;/div&gt;
+</pre></div><div class="break-sm"><div>Read the docs</div><a href="http://angular.github.io/router/">http://angular.github.io/router/</a></div></div></section><section><header><h2>Next Steps</h2><h3>Resources</h3></header><div class="break"><ul><li><div>Docs</div><div class="small"><a href="https://angular.io/docs/js/latest/">https://angular.io/docs/js/latest/</a></div></li><li><div>Github</div><div class="small"><a href="https://github.com/angular/angular">https://github.com/angular/angular</a></div></li><li><div>Gitter (chat)</div><div class="small"><a href="https://gitter.im/angular/angular">https://gitter.im/angular/angularan</a></div></li></ul></div></section><section><header><h2>Thanks!</h2></header></section></section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
 <script src="js/reveal.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">

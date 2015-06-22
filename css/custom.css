@@ -31,6 +31,9 @@
 .small-50 {
   font-size: 0.50em !important;
 }
+a {
+  color: #cccccc !important;
+}
 ul.no-bullet {
   list-style: none;
 }
